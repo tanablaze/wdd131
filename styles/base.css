@@ -1,0 +1,199 @@
+
+/* =========================================
+   WDD 131 - DYNAMIC WEB FUNDAMENTALS
+   Author: Unity Santana Sunday
+   ========================================= */
+
+/* 1. CSS variables and global settings */
+
+:root {
+    --navy: #142b4a;
+    --navy-light: #243d5b;
+    --gold: #c49a43;
+    --cream: #f8f5ef;
+    --white: #ffffff;
+    --text: #252525;
+    --border: #d8d2c7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--cream);
+}
+
+/* 2. Header */
+
+header {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    padding: 1.5rem 1rem;
+    font-family: "Playfair Display", serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* 3. Navigation using Flexbox */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.8rem 1rem;
+    background-color: var(--navy-light);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: var(--gold);
+    color: var(--navy);
+    outline: none;
+}
+
+/* 4. Main content */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+    color: var(--navy);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+}
+
+/* 5. Cards using CSS Grid */
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(20, 43, 74, 0.08);
+    padding-bottom: 1.25rem;
+}
+
+.card h2 {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 0.8rem 1rem;
+    font-family: "Playfair Display", serif;
+    font-size: 1.35rem;
+}
+
+.card h3 {
+    color: var(--navy);
+    margin: 1rem 1.25rem 0.5rem;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 0.35rem;
+    font-size: 1.1rem;
+}
+
+.card p {
+    padding: 0.75rem 1.25rem;
+}
+
+/* 6. Image and text layout */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.25rem 1.25rem 0;
+}
+
+.about-content p {
+    padding: 0;
+}
+
+.about-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* 7. Footer */
+
+footer {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: 1rem;
+}
+
+footer p + p {
+    color: #f0dba9;
+    font-size: 0.9rem;
+    margin-top: 0.35rem;
+}
+
+/* 8. Responsive design for smaller screens */
+
+@media screen and (max-width: 700px) {
+    #course-title {
+        font-size: 1.3rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content img {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
