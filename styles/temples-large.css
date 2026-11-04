@@ -1,0 +1,78 @@
+/* =========================================
+   WDD 131 - W02 TEMPLE ALBUM
+   Larger Screen Styles
+   Author: Unity Santana Sunday
+   ========================================= */
+
+/* TABLET AND DESKTOP VIEW */
+
+@media screen and (min-width: 700px) {
+
+    /* HEADER */
+
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    .header-container {
+        flex-wrap: nowrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* HIDE HAMBURGER BUTTON */
+
+    #menu-button {
+        display: none;
+    }
+
+    /* HORIZONTAL NAVIGATION */
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: auto;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.7rem 1rem;
+    }
+
+    /* MAIN HEADING */
+
+    main h1 {
+        font-size: 2.2rem;
+    }
+
+    /* TEMPLE GRID */
+
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    figure {
+        transition: transform 0.3s ease;
+    }
+
+    figure:hover {
+        transform: translateY(-5px);
+    }
+
+}
+
+/* VERY LARGE SCREENS */
+
+@media screen and (min-width: 1200px) {
+
+    main {
+        max-width: 1200px;
+    }
+
+    .temple-grid {
+        gap: 2.5rem;
+    }
+
+}
