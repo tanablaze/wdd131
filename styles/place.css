@@ -1,0 +1,161 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-color: #008751;
+    --secondary-color: #ffffff;
+    --accent-color: #006b3f;
+    --footer-color: #004d2e;
+    --text-color: #222222;
+    --card-background: #ffffff;
+
+    --heading-font: 'Roboto', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 6px solid var(--accent-color);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Hero Section */
+.hero {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.hero picture,
+.hero img {
+    display: block;
+    width: 100%;
+}
+
+.hero img {
+    height: auto;
+    object-fit: cover;
+}
+
+/* Mobile Layout */
+.data,
+.weather {
+    background-color: var(--secondary-color);
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.data h2,
+.weather h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.data-grid p,
+.weather-grid p {
+    margin: 0.5rem 0;
+}
+
+.data-grid strong,
+.weather-grid strong {
+    color: var(--accent-color);
+}
+
+/* Weather Icon - Mobile */
+.weather-icon {
+    display: block;
+    width: 70px;
+    height: auto;
+    margin: 0 auto 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* ==========================================
+   Desktop / Large View
+========================================== */
+@media screen and (min-width: 768px) {
+
+    main {
+        position: relative;
+    }
+
+    .hero img {
+        min-height: 700px;
+        object-fit: cover;
+    }
+
+    .data,
+    .weather {
+        position: absolute;
+        max-width: 320px;
+        background: var(--card-background);
+        margin: 0;
+    }
+
+    .data {
+        top: 40px;
+        left: 30px;
+    }
+
+    .weather {
+        bottom: 40px;
+        right: 30px;
+    }
+
+    /* Required Pseudo-element */
+    .weather h2::after {
+        content: " ⛅";
+    }
+
+    /* Hide SVG Icon in Desktop View */
+    .weather-icon {
+        display: none;
+    }
+
+    .data h2,
+    .weather h2 {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.75rem;
+        margin: -1.5rem -1.5rem 1rem -1.5rem;
+    }
+}
