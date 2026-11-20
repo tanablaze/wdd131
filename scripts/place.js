@@ -1,35 +1,26 @@
-// ================================
 // Footer Information
-// ================================
+document.getElementById("currentyear").textContent =
+    new Date().getFullYear();
 
-const currentYear = document.querySelector("#currentyear");
-const lastModified = document.querySelector("#lastModified");
+document.getElementById("lastModified").textContent =
+    `Last Modified: ${document.lastModified}`;
 
-currentYear.textContent = new Date().getFullYear();
+// Weather Data
+const temperature = 8;
+const windSpeed = 10;
 
-lastModified.textContent = `Last Modified: ${document.lastModified}`;
-
-// ================================
-// Weather Data (Static Values)
-// ================================
-
-const temperature = 8; // °C
-const windSpeed = 10; // km/h
-
-// ================================
-// Wind Chill Calculation Function
-// Metric Formula (°C and km/h)
-// ================================
-
+// Wind Chill Function
 function calculateWindChill(temp, speed) {
-    return 13.12 + (0.6215 * temp) - (11.37 * Math.pow(speed, 0.16)) + (0.3965 * temp * Math.pow(speed, 0.16));
+    return (
+        13.12 +
+        (0.6215 * temp) -
+        (11.37 * Math.pow(speed, 0.16)) +
+        (0.3965 * temp * Math.pow(speed, 0.16))
+    );
 }
 
-// ================================
-// Wind Chill Display
-// ================================
-
-const windChillElement = document.querySelector("#windchill");
+// Display Wind Chill
+const windChillElement = document.getElementById("windchill");
 
 if (temperature <= 10 && windSpeed > 4.8) {
     const windChill = calculateWindChill(temperature, windSpeed);
