@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+
+main {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 1.5rem 0;
+}
+
+img {
+    display: block;
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+    margin: 1rem auto;
+
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+footer {
+    margin: 2rem 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        filter: brightness(0);
+    }
+
+    to {
+        opacity: 1;
+        filter: brightness(1);
+    }
+}
