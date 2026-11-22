@@ -1,0 +1,89 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+/* Main Content */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Heading */
+#courseName {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f4e79;
+    font-size: 2rem;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header */
+thead {
+    background-color: #1f4e79;
+    color: white;
+}
+
+thead th {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Table Body */
+tbody td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+}
+
+/* Zebra Striping */
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Hover Effect */
+tbody tr:hover {
+    background-color: #e8f0fe;
+}
+
+/* Responsive Table */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    #courseName {
+        font-size: 1.5rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    thead th,
+    tbody td {
+        padding: 0.5rem;
+    }
+}
