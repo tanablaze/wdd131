@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Product Review Form allowing users to select a product, provide a rating, choose useful features, enter installation information, and submit a review.">
+
+    <meta name="author" content="Unity Santana">
+
+    <title>Product Review Form | WDD131</title>
+
+    <link rel="stylesheet" href="styles/form.css">
+
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Product Review Form</h1>
+</header>
+
+<main>
+
+    <form method="get" action="review.html">
+
+        <label for="productName">Product Name *</label>
+
+        <select id="productName" name="productName" required>
+            <option value="" selected disabled>
+                Select a Product ...
+            </option>
+        </select>
+
+        <fieldset>
+            <legend>Overall Rating *</legend>
+
+            <label for="star1">
+                <input type="radio" id="star1" name="rating" value="1" required>
+                ☆
+            </label>
+
+            <label for="star2">
+                <input type="radio" id="star2" name="rating" value="2">
+                ☆☆
+            </label>
+
+            <label for="star3">
+                <input type="radio" id="star3" name="rating" value="3">
+                ☆☆☆
+            </label>
+
+            <label for="star4">
+                <input type="radio" id="star4" name="rating" value="4">
+                ☆☆☆☆
+            </label>
+
+            <label for="star5">
+                <input type="radio" id="star5" name="rating" value="5">
+                ☆☆☆☆☆
+            </label>
+        </fieldset>
+
+        <label for="installDate">Date of Installation *</label>
+
+        <input
+            type="date"
+            id="installDate"
+            name="installDate"
+            required
+        >
+
+        <fieldset>
+            <legend>Useful Features (Check all that apply)</legend>
+
+            <label for="durability">
+                <input
+                    type="checkbox"
+                    id="durability"
+                    name="features"
+                    value="Durability"
+                >
+                Durability
+            </label>
+
+            <label for="ease">
+                <input
+                    type="checkbox"
+                    id="ease"
+                    name="features"
+                    value="Ease of Use"
+                >
+                Ease of Use
+            </label>
+
+            <label for="performance">
+                <input
+                    type="checkbox"
+                    id="performance"
+                    name="features"
+                    value="Performance"
+                >
+                Performance
+            </label>
+
+            <label for="design">
+                <input
+                    type="checkbox"
+                    id="design"
+                    name="features"
+                    value="Design"
+                >
+                Design
+            </label>
+        </fieldset>
+
+        <label for="review">
+            Written Review (Optional)
+        </label>
+
+        <textarea
+            id="review"
+            name="review"
+            rows="5"
+        ></textarea>
+
+        <label for="userName">
+            User Name (Optional)
+        </label>
+
+        <input
+            type="text"
+            id="userName"
+            name="userName"
+        >
+
+        <input
+            type="submit"
+            value="Submit Review"
+        >
+
+    </form>
+
+</main>
+
+<footer>
+    <p>
+        &copy; <span id="currentyear"></span> |
+        Unity Santana | WDD131
+    </p>
+
+    <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>
