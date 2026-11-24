@@ -21,7 +21,8 @@ header {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -32,10 +33,15 @@ main {
 }
 
 section {
-    background: white;
+    background-color: var(--light);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
+}
+
+img {
+    display: block;
+    margin-bottom: 15px;
 }
 
 .color-box {
@@ -54,10 +60,19 @@ section {
     color: black;
 }
 
+.heading-font {
+    font-family: 'Poppins', sans-serif;
+}
+
+.body-font {
+    font-family: 'Merriweather', serif;
+}
+
 pre {
     overflow-x: auto;
-    background: #eee;
+    background-color: #eeeeee;
     padding: 15px;
+    border-radius: 6px;
 }
 
 footer {
